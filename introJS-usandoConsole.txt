@@ -1,0 +1,218 @@
+var hw = "Hello world";
+undefined
+hw
+'Hello world'
+console.log
+ƒ log() { [native code] }
+console.log("Giovanna");
+VM376:1 Giovanna
+undefined
+console.log(hw)
+VM457:1 Hello world
+undefined
+var nome;
+undefined
+nome
+undefined
+nome = "Giovanna";
+'Giovanna'
+nome
+'Giovanna'
+var idade = 30;
+undefined
+idade
+30
+var salario = 3100.97;
+undefined
+salario
+3100.97
+var vivo = true;
+undefined
+vivo
+true
+if(vivo) { console.log("O salario de " + nome + " é: " + salario);}
+          
+VM1335:1 O salario de Giovanna é: 3100.97
+undefined
+if(vivo) { console.log("O salario de " + nome + " é: " + salario);} else{console.log("Funcionário morto");}
+          
+VM1457:1 O salario de Giovanna é: 3100.97
+undefined
+if(!vivo) { console.log("O salario de " + nome + " é: " + salario);} else{console.log("Funcionário morto");}
+          
+VM1466:1 Funcionário morto
+undefined
+if(!vivo) { console.log("O salario de " + nome + " é: " + salario);} else{console.log("Funcionário morto :(");}
+          
+VM1477:1 Funcionário morto :(
+undefined
+var livro = {nome: "JS", paginas: 1080}
+undefined
+livro
+{nome: 'JS', paginas: 1080}
+livro.nome
+'JS'
+livro['nome']
+'JS'
+livro.capa
+undefined
+livro.capa = "Dura";
+'Dura'
+livro
+{nome: 'JS', paginas: 1080, capa: 'Dura'}
+livro['preco']= 587.30;
+587.3
+livro
+{nome: 'JS', paginas: 1080, capa: 'Dura', preco: 587.3}
+var pessoa = {nome: "Giovanna", idade: "18", salario: "3100.97", vivo: true}
+undefined
+pessoa
+{nome: 'Giovanna', idade: '18', salario: '3100.97', vivo: true}
+pessoa.curso = "WEB";
+'WEB'
+pessoa
+{nome: 'Giovanna', idade: '18', salario: '3100.97', vivo: true, curso: 'WEB'}
+pessoa['sexo']= "Feminino";
+'Feminino'
+pessoa
+{nome: 'Giovanna', idade: '18', salario: '3100.97', vivo: true, curso: 'WEB', …}curso: "WEB"idade: "18"nome: "Giovanna"salario: "3100.97"sexo: "Feminino"vivo: true[[Prototype]]: Object
+var primos = [2, 3, 5, 7, 11];
+undefined
+primos
+(5) [2, 3, 5, 7, 11]
+primos.length
+5
+primos
+(5) [2, 3, 5, 7, 11]
+primos[5]=13;
+13
+primos
+(6) [2, 3, 5, 7, 11, 13]
+primos[5]=12;
+12
+primos
+(6) [2, 3, 5, 7, 11, 12]
+primos[5]=13;
+13
+primos
+(6) [2, 3, 5, 7, 11, 13]
+primos[primos.length]=17;
+17
+primos
+(7) [2, 3, 5, 7, 11, 13, 17]
+var fibo;
+undefined
+fibo.lenght
+VM2797:1 Uncaught TypeError: Cannot read properties of undefined (reading 'lenght')
+    at <anonymous>:1:6
+(anonymous) @ VM2797:1
+var fibo = {};
+undefined
+fibo.length
+undefined
+fibo[0]= 1;
+1
+fibo
+{0: 1}
+fibo.length
+undefined
+var fibo[];
+VM3009:1 Uncaught SyntaxError: Unexpected token '['
+var fib = [];
+undefined
+fibo.length
+undefined
+var fibo = [];
+undefined
+fibo.length
+0
+livro
+{nome: 'JS', paginas: 1080, capa: 'Dura', preco: 587.3}
+livro.contents
+undefined
+var count = 0;
+undefined
+count
+0
+count++;
+0
+count
+1
+count
+1
+count++;
+1
+count
+2
+count++;
+2
+count++;
+3
+count++;
+4
+count++;
+5
+count++;
+6
+count++;
+7
+count += 2;
+10
+count -= 2;
+8
+count *= 2;
+16
+count /= 2;
+8
+3 + 8
+11
+3*2
+6
+3-1
+2
+18/9
+2
+var x = 2;
+undefined
+var y = 3;
+undefined
+x == y
+false
+x != y
+true
+x < y
+true
+x > y
+false
+x <= y
+true
+"g" == "g"
+true
+"g" == "G"
+false
+"'" == "´" 
+false
+"a" >= "a"
+true
+(x<y)&&(Y<x)
+VM4028:1 Uncaught ReferenceError: Y is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM4028:1
+(x<y)&&(y<x)
+false
+(x<y)||(y<x)
+true
+!(x<y)||(y<x)
+false
+!(!(x<y)||(y<x))
+true
+function somaUm(x) {}
+undefined
+function somaUm(x) {}
+undefined
+function somaUm(x) { var b = x+1, return}
+VM4435:1 Uncaught SyntaxError: Unexpected token 'return'
+function somaUm(x) { var b = x+1; return}
+undefined
+somaUm
+ƒ somaUm(x) { var b = x+1; return}

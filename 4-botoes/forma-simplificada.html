@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+        div.op1 {
+                float:left; 
+                background:Red;
+                width:50%;
+                height:380px;
+            }
+        div.op2{
+                float:left; 
+                background:Green;
+                width:50%;
+                height:380px;
+                overflow: auto;
+            }
+        input.verde{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        input.vermelho{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+ 
+    </style>
+    <script>
+        function logar(texto) {
+            var dlog = document.getElementById("div2");// identificar a div log 
+            var elementop = document.createElement("p");//<p></p> criar um elemento p
+            elementop.innerText = texto;//<p>(1,1)</p> passar o valor pra p
+            dlog.appendChild(elementop);//<div><p>(1,1)</p></div> incluir p como filho de log
+        }
+         function mouseEntra(botao) {
+            botao.className = "vermelho";//mudando a cor dele pra vermelho
+            logar(botao.value);
+         }
+         function mouseSai(botao) {
+             botao.className="verde";
+         }
+    </script>
+</head>
+<body>
+    <div style="height: 300px; display: block;">
+        <div class="op1" id="div1" style="background-color: aqua;">
+            <input type="button" class="verde" value="(1,1)" id="b1" onmouseenter="this.className='vermelho'; logar(this.value)" onmouseleave="this.className='verde'">
+            <input type="button" class="verde" value="(1,2)" id="b2" onmouseenter="this.className='vermelho'; logar(this.value)" onmouseleave="this.className='verde'"><br>
+            <input type="button" class="verde" value="(2,1)" id="b3" onmouseenter="mouseEntra(this)" onmouseleave="mouseSai(this)">
+            <input type="button" class="verde" value="(2,2)" id="b4" onmouseenter="mouseEntra(this)" onmouseleave="mouseSai(this)">
+ 
+        </div>
+        <div class="op2" id="div2" style="background-color:bisque;">
+ 
+        </div>
+    </div>
+ 
+</body>
+</html>

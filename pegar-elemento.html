@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Minha página</title>
+        <script>
+            //código js
+            // function alert(){
+            //     alert('Hello World!');
+            // }
+            // function x(){
+            //     var par = document.getElementById("paragrafo");
+            //     par.style.backgroundColor="yellow";
+            // }
+
+            // window.onload = function(){
+            //     x();
+            // }
+
+            //ou
+
+            function y (){
+                var par = document.getElementById("paragrafo");
+                par.innerText = "Caraguatatuba";
+            }
+
+            window.onload = function(){
+                var par = document.getElementById("paragrafo");
+                par.style.backgroundColor="yellow";
+                par.style.textAlign="center";
+                par.style.fontSize="50px";
+                mostraHora();
+            }
+
+            function mostraHora(){
+                var rel = document.getElementById("relogio");
+                var agora = new Date();
+                var d = agora.toLocaleTimeString();//formato brasileiro
+                rel.innerHTML = d;
+                console.log(d +" "+ agora.getMilliseconds());
+                
+                setTimeout(mostraHora,3000);
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#">Link</a>
+
+        <!-- <p onclick="alert('Hello World!');">IFSP</p>
+        <p oncontextmenu="alert('Hello World!');">IFSP-2</p>
+        <p onfocus="alert('Hello World!');">IFSP-3</p>
+        <p onmousemove="alert('Hello World!!!');">IFSP-4</p>
+        <p onmouseleave="alert('Hello!!!');">IFSP-5</p>
+        <p onmouseleave="alert('Hello!!!');">IFSP-6</p> -->
+
+        <!-- <p id="paragrafo" onmouseover="x()";>IFSP</p> quando passar o mouse encima. -->
+
+        <!-- <p id="paragrafo" onclick="y(); mostraHora();">IFSP</p> -->
+
+        <p id="paragrafo" onclick="mostraHora(); y();">IFSP</p>
+        <span id="relogio">00:00:00</span>
+    </body>
+</html>
+
+
+
+
+<!-- CÓDIGO DO PROFESSOR -->
+<!-- <!DOCTYPE html> 
+    <head>
+        <title>Minha página</title>
+        <script>
+            //codigo js
+ 
+            function y (){
+                var par = document.getElementById("paragrafo");
+                par.innerText = "Caraguatatuba";
+            }
+ 
+            window.onload = function(){
+                var par = document.getElementById("paragrafo");
+                par.style.backgroundColor="#00FF00";
+                par.style.textAlign="center";
+                mostraHora();
+            }
+ 
+            function mostraHora(){
+                var rel = document.getElementById("relogio");
+                var agora = new Date();
+                var d = agora.toLocaleTimeString();
+                rel.innerHTML = d;
+                console.log(d +" "+ agora.getMilliseconds());
+ 
+                setTimeout(mostraHora,10);
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#">Link</a>
+        <p id="paragrafo" onclick="mostraHora();" >IFSP</p>
+        <span id="relogio">00:00:00</span>
+    </body>
+</html> -->

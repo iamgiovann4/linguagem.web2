@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.op1{
+            float: left;
+            background-color: red;
+            width: 50%;
+            height: 300px;
+            overflow: auto;
+        }
+        div.op2{
+            float: left;
+            background-color: green;
+            width: 50%;
+            height: 300px;
+            overflow: auto;
+        }
+        input.verde{
+            background-color: green;
+
+        }
+        input.vermelho{
+            background-color: red;
+        }
+    </style>
+    <script>
+        //BOTÃO 01
+
+        function mouseEntra1(){
+            var b1 = document.getElementById("b1");     //identificar o botão
+            b1.className = "vermelho";                  //Mudar a cor dele para vermelho
+            var dlog = document.getElementById("div2"); //Identificar a div log
+            var elementop = document.createElement("p") //Criar um elemento p: <p></p>
+            elementop.innerHTML = "(1,1)";              //Passar o valor para p: <p>(1,1)</p>
+            dlog.appendChild(elementop);                //Incluir o p como filho de log: <div><p>(1,1)</p></div>      
+        }
+        function mouseSai1(){
+            var b1 = document.getElementById("b1");     //Identificar o botão
+            b1.className = "verde";                     //Mudar a cor dele para verde
+        }
+
+        //BOTÃO 02
+
+        function mouseEntra2(){
+            var b2 = document.getElementById("b2");     //identificar o botão
+            b2.className = "vermelho";                  //Mudar a cor dele para vermelho
+            var dlog = document.getElementById("div2"); //Identificar a div log
+            var elementop = document.createElement("p") //Criar um elemento p: <p></p>
+            elementop.innerHTML = "(1,2)";              //Passar o valor para p: <p>(1,1)</p>
+            dlog.appendChild(elementop);                //Incluir o p como filho de log: <div><p>(1,1)</p></div>      
+        }
+        function mouseSai2(){
+            var b2 = document.getElementById("b2");     //Identificar o botão
+            b2.className = "verde";                     //Mudar a cor dele para verde
+        }
+
+        //BOTÃO 03
+
+        function mouseEntra3(){
+            var b3 = document.getElementById("b3");     //identificar o botão
+            b3.className = "vermelho";                  //Mudar a cor dele para vermelho
+            var dlog = document.getElementById("div2"); //Identificar a div log
+            var elementop = document.createElement("p") //Criar um elemento p: <p></p>
+            elementop.innerHTML = "(2,1)";              //Passar o valor para p: <p>(1,1)</p>
+            dlog.appendChild(elementop);                //Incluir o p como filho de log: <div><p>(1,1)</p></div>      
+        }
+        function mouseSai3(){
+            var b3 = document.getElementById("b3");     //Identificar o botão
+            b3.className = "verde";                     //Mudar a cor dele para verde
+        }
+
+        //BOTÃO 04
+
+        function mouseEntra4(){
+            var b4 = document.getElementById("b4");     //identificar o botão
+            b4.className = "vermelho";                  //Mudar a cor dele para vermelho
+            var dlog = document.getElementById("div2"); //Identificar a div log
+            var elementop = document.createElement("p") //Criar um elemento p: <p></p>
+            elementop.innerHTML = "(2,2)";              //Passar o valor para p: <p>(1,1)</p>
+            dlog.appendChild(elementop);                //Incluir o p como filho de log: <div><p>(1,1)</p></div>      
+        }
+        function mouseSai4(){
+            var b4 = document.getElementById("b4");     //Identificar o botão
+            b4.className = "verde";                     //Mudar a cor dele para verde
+        }
+    </script>
+</head>
+<body>
+    <div style="height: 300px; display: block;">
+        <div class="op1" id="div1" style="background-color: aqua;">
+            <input type="button" class="verde" value="(1,1)" id="b1" onmouseenter="mouseEntra1()" onmouseleave="mouseSai1()">
+            <input type="button" class="verde" value="(1,2)" id="b2" onmouseenter="mouseEntra2()" onmouseleave="mouseSai2()">
+            <input type="button" class="verde" value="(2,1)" id="b3" onmouseenter="mouseEntra3()" onmouseleave="mouseSai3()">
+            <input type="button" class="verde" value="(2,2)" id="b4" onmouseenter="mouseEntra4()" onmouseleave="mouseSai4()">
+        </div>
+        <div class="op2" id="div2" style="background-color: bisque;"></div>
+    </div>
+
+</body>
+</html>

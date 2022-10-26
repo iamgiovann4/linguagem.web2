@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            display: flex;
+        }
+        div.verde, div.vermelho{
+            font-size: 200px;
+            padding: 10px;
+        }
+        div.verde{
+            border: 0.5px solid black;
+            background-color: rgb(134, 211, 134);
+        }
+        div.vermelho{
+            border: 0.5px solid black;
+            background-color: rgb(230, 83, 83);
+        }
+        body{
+            background-color: rgb(7, 4, 1);
+        }
+
+        <!-- input{
+            border:0;
+            /* font-size: 45px; */
+        }
+        input.verde{
+            background-color: rgb(42, 104, 42);
+        }
+        input.vermelho{
+            background-color: rgb(230, 83, 83);
+        } -->
+    </style>
+    <script>
+        function alterar(botao){
+            botao.className='vermelho centralizar';
+        }
+        function voltar(botao) {
+            botao.className='verde centralizar';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div class="container1">
+            <div>
+                <div class="verde" id="div1" onmouseenter="alterar(this)" onmouseleave="voltar(this)">(1,1)</div>
+                <div class="verde" id="div2" onmouseenter="alterar(this)" onmouseleave="voltar(this)">(2,1)</div>
+            </div>
+            <div>
+                <div class="verde" id="div3" onmouseenter="alterar(this)" onmouseleave="voltar(this)">(1,2)</div>
+                <div class="verde" id="div4" onmouseenter="alterar(this)" onmouseleave="voltar(this)">(2,2)</div>
+            </div>
+        </div>
+    </div>
+<!-- 
+    <br><br><br>
+
+    <div>
+        <div class="container">
+            <div>
+                <input type="button" value="(1,1)" class="verde" id="b1" onmouseenter="this.className='vermelho'" onmouseleave="this.className='verde'">
+                <input type="button" value="(1,2)" class="verde" id="b2" onmouseenter="this.className='vermelho'" onmouseleave="this.className='verde'">
+            </div>
+            <div>
+                <input type="button" value="(2,1)" class="verde" id="b3" onmouseenter="alterar(this)" onmouseleave="voltar(this)">
+                <input type="button" value="(2,2)" class="verde" id="b2" onmouseenter="alterar(this)" onmouseleave="voltar(this)">
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>

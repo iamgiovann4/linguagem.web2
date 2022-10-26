@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(241, 158, 174);
+}
+
+.conteudo{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#click{
+    padding: 10px 40px;
+    background-color: rgb(228, 228, 15);
+    border-radius: 30px; 
+    font-size: 35px;
+}
+
+img{
+    width: 650px;
+    height: 700px;
+    border-radius: 70px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mudança de imagens</title>
+
+    <link rel="stylesheet" href="style/css.css">
+</head>
+<body id='corpo'>
+    <div class="conteudo">
+        <figure>
+            <img id="puppy" src="img/puppy.png">
+        </figure>
+        <button id="click" value="showTheSnake" onclick="t()">Show the snake</button>
+    </div>
+
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+<!-- PROFESSOR: -->
+        
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mudança de imagens</title>
+
+    <style>
+        .mostrarCobra{
+            display: inline;
+        }
+        .mostrarCachorro{
+            display: none;
+        }
+        img{
+            width: 650px;
+            height: 700px;
+            border-radius: 70px;
+        }
+        input{
+            padding: 10px 40px;
+            background-color: rgb(27, 32, 32);
+            border-radius: 30px; 
+            font-size: 35px;
+            color: white;
+        }
+        body{
+            background-color: rgb(175, 157, 160);
+        }
+    </style>
+ 
+    <script>
+        function alterar(){
+            var i1 = document.getElementById("imgCobra");
+            var i2 = document.getElementById("imgCachorro");
+            var b = document.getElementById("btn");
+            
+            if(b.value == "Mostrar o cachorro"){
+                i1.className = "mostrarCachorro";
+                i2.className = "mostrarCobra";
+                b.value = "Mostrar a cobra";
+            }else{
+                i2.className = "mostrarCachorro";
+                i1.className = "mostrarCobra";
+                b.value = "Mostrar o cachorro";
+            }
+            return "";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="Mostrar o cachorro" onclick="console.log(alterar())">
+    <img id="imgCobra" src='img/snake.png' class="mostrarCobra">
+    <img id="imgCachorro" src="img/puppy.png" class="mostrarCachorro">
+</body>
+</html> -->

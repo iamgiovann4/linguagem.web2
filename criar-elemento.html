@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Elemento</title>
+    <script>
+        // function criarParagrafo() {
+        //     var parafo = document.createElement("p");
+        //     parafo.innerText = "Texto do Parágrafo";
+        //     document.body.appendChild(parafo);
+        // }
+
+        function criarParagrafo() {
+            var parafo = document.createElement("p");
+            var agora = new Date();
+            var d = agora.toLocaleTimeString();
+            parafo.innerText = d;
+            document.body.appendChild(parafo);
+        }
+    </script>
+</head>
+<body>
+    <!-- <div id="paragrafos">
+
+    </div> -->
+    <input type="button" value="Criar Parágrafo" onmouseover="criarParagrafo()">
+</body>
+</html>
+
+<!-- PROFESSOR:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function criaParagrafo(){
+            var parafo = document.createElement("p");
+            var agora = new Date();
+            var d = agora.toLocaleTimeString();
+            parafo.innerText = d;
+            document.body.appendChild(parafo);
+        }
+    </script>
+</head>
+<body>
+    <div id="paragrafos">
+ 
+    </div>
+    <input type="button" value="Criar Parágrafo" onmouseover="criaParagrafo()">
+</body>
+ 
+</html> -->

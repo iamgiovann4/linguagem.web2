@@ -1,0 +1,128 @@
+1ª Rodada:
+O dragão cospe fogo em Paulo
+Paulo ficou com 20 de vida
+
+2ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 25 de vida
+
+3ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 20 de vida
+
+4ª Rodada:
+O dragão cospe fogo em Paulo
+Paulo ficou com 15 de vida
+
+5ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 15 de vida
+
+6ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 10 de vida
+
+7ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 5 de vida
+
+8ª Rodada: 
+O dragão cospe fogo em Paulo
+Paulo ficou com 10 de vida
+
+9ª Rodada:
+Paulo dá um murro no dragão
+O dragão ficou com 5 de vida
+
+10ª Rodada:
+Paulo dá um murro no dragão
+O dragão morre
+
+
+/*let paulo = 25;
+let dragao = 25;
+
+do {
+  mov1 = prompt('Digite um numero:');
+
+  if (mov1 === '1') {
+    dragao = dragao - 5;
+  console.log('vida do dragao', dragao);
+    
+  } else if (mov1 === '2') {
+    paulo = paulo - 5;
+    console.log('vida do paulo',  paulo);
+    
+  }
+  
+} while (dragao > 0 && paulo > 0);
+ 
+  if (dragao === 0) {
+    console.log('dragao morreu')
+    
+  } else  {
+     console.log('paulo morreu')
+    
+  }*/
+
+/*
+function mov1() {
+  console.log('O dragão cospe fogo em Paulo');
+  console.log('Paulo ficou com 20 de vida');
+  console.log('=================================');
+}
+function mov2() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 25 de vida');
+  console.log('=================================');
+}
+function mov3() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 20 de vida');
+  console.log('=================================');
+}
+function mov4() {
+  console.log('O dragão cospe fogo em Paulo');
+  console.log('O dragão ficou com 20 de vida');
+  console.log('=================================');
+}
+function mov5() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 15 de vida');
+  console.log('=================================');
+}
+function mov6() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 5 de vida');
+  console.log('=================================');
+}
+function mov7() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 5 de vida');
+  console.log('=================================');
+}
+function mov8() {
+  console.log('O dragão cospe fogo em Paulo');
+  console.log('Paulo ficou com 10 de vida');
+  console.log('=================================');
+}
+function mov9() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O dragão ficou com 5 de vida');
+  console.log('=================================');
+}
+function mov10() {
+  console.log('Paulo dá um murro no dragão');
+  console.log('O DRAGÃO MORREU!!!')
+  console.log('=================================');
+}
+mov1();
+mov2();
+mov3();
+mov4();
+mov5();
+mov6();
+mov7();
+mov8();
+mov9();
+mov10();*/
