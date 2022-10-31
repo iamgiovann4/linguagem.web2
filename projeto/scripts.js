@@ -57,20 +57,17 @@ function x() {
     var corpoTabela1 = document.getElementById("corpoTabela1");
     corpoTabela1.innerHTML=""; //O corpo tabela 1 irá receber um texto.
 
-    for (var i = 0; i < novoP.length; i++) {
-        var trPessoa = document.createElement("tr"); //tr é linha.
-        var td1 = document.createElement("td"); //td é célula dentro da linha.
-
-        var cadastroP = novoP[i];
-
-        td1.innerText=cadastroP.nome;
-        trPessoa.appendChild(td1);
-
-        corpoTabela1.appendChild(trPessoa);
-
-
-        // INSERIR O VALOR
+    for (var i = 0; i < novoP.length; i++) {  
         for (var j = 0; j < novoI.length; j++) {
+            var trPessoa = document.createElement("tr"); //tr é linha.
+            var td1 = document.createElement("td"); //td é célula dentro da linha.
+
+            var cadastroP = novoP[i];
+
+            td1.innerText=cadastroP.nome;
+            trPessoa.appendChild(td1);
+
+            corpoTabela1.appendChild(trPessoa);
             td6 = document.createElement("td");
             
             var cadastroI = novoI[j];
@@ -127,22 +124,3 @@ function z() {
         corpoTabela3.appendChild(trIngredientes);
     }
 }
-
-// function v() {
-//     var corpoTabela1 = document.getElementById("corpoTabela1");
-//     corpoTabela1.innerText="";
-
-//     for (var index = 0; index < novoI.length; index++) {
-//         var trPessoa = document.createElement("tr");
-//         td6 = document.createElement("td");
-
-//         var cadastroI = novoI[index];
-
-//         qtdTotal = parseFloat(cadastroI.qtdA) + parseFloat(2 * (cadastroI.iqtdC * cadastroI.valor));
-
-//         td6.innerText = qtdTotal;
-//         trPessoa.appendChild(td6);
-
-//         corpoTabela1.appendChild(trPessoa);
-//     }
-// }
