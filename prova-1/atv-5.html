@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 05</title>
+
+    <!-- Considerando o array:
+    var x= [[
+      ["a",25],
+      ['b',4],
+      ["c",1],
+      ["d",2],
+    ]]; 
+    Qual o tamanho de x? -->
+
+    <script>
+    var x= [[
+        ["a",25],
+        ['b',4],
+        ["c",1],
+        ["d",2],
+    ]];
+
+    function mostrar() {
+        var tamanho = document.getElementById("tamanho");
+        tamanho.innerHTML = x.length;
+
+        console.log(x.length);
+    }
+
+    window.onload = function(){
+        mostrar();
+    }
+    </script>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+        <h4 style="text-align: center;"> 
+            var x= [[ <br>
+            ["a",25], <br>
+            ['b',4],  <br>
+            ["c",1],  <br>
+            ["d",2],]];
+        </h4>
+        <h3 style="text-align: center;">O tamanho de X é :</h3>
+        <p id="tamanho" style="text-align: center;"></p>
+    </div>
+    
+</body>
+</html>

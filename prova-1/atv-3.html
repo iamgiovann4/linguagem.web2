@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 03</title>
+
+    <style>
+        .caixas{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cx1, .cx2 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cx1 {
+            width: 20%;
+        }
+        .cx2 {
+            width: 30%;
+            height: auto
+        }
+        #valor, #acrescimo {
+            width: 100px;
+        }
+    </style>
+
+    <!-- Escreva um script em javascript que calcule e exiba na página (em HTML) o valor de venda a partir do valor de compra informado em um input, acrescido de 30%. -->
+
+    <script>
+        function porcentagem() {
+            var valor = document.getElementById('valor')
+            var acrescimo = document.getElementById('acrescimo');
+
+            acrescimo.value = (parseFloat(valor.value) * 0.3) + parseFloat(valor.value);
+        }
+    </script>
+</head>
+<body>
+    <div class="caixas">
+        <div class="cx1">
+            <label for="">Insira o valor da venda:</label>
+            <br>
+            <input type="number" value="" id="valor" placeholder="insira o valor...">
+        </div>
+
+        <div class="cx2">
+            <p>Aperte o botão "Calcular" para retornar o acrescimo.</p>
+            <label for="">Valor da compra acrescido de 30%:</label> <br>
+            <input type="text" value="" id="acrescimo" placeholder="00">
+            <br><br>
+            <input type="button" value="Calcular" onclick="porcentagem()">
+        </div>
+    </div>
+    
+    
+
+
+    
+
+</body>
+</html>

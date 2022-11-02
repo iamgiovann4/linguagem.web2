@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 04</title>
+
+    <!-- Escreva um script em javascript que log, no console, as respectivas ações sobre um botão de tamanho 100px por 150px, com as seguintes mensagens:
+    -passou o ponteiro do mouse por cima
+    -clicou
+    -retirou o ponteiro do mouse de cima -->
+    <style>
+        body{
+            background-color: grey;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            border: 3px solid black;
+            border-radius: 20px;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+
+    <script>
+        function entrar() {
+            console.log("passou o ponteiro do mouse por cima")
+        }
+        function clicou() {
+            console.log("clicou")
+        }
+        function sair() {
+            console.log("retirou o ponteiro do mouse de cima")
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="Olá"
+        onmouseenter="entrar()"
+        onclick="clicou()"
+        onmouseleave="sair()">
+    </div>
+</body>
+</html>

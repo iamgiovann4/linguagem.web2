@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 02</title>
+
+    <!-- Escreva um script em javascript que exibe na página (HTML) todos os números ímpares entre 30 e 0, em ordem decrescente (29, 27, 25, ..., 3, 1), utilizando while. -->
+
+    <script>
+
+        function mostrar() {
+            var paragraf = document.getElementById('impares');
+            var num = 29;
+            var ordem_decrescente = "";
+            while (num >= 1) {
+                console.log(num);
+                if (num != 1) {
+                    var ordem_decrescente = ordem_decrescente +  num + ", ";
+                } else {
+                    var ordem_decrescente = ordem_decrescente +  num + ". ";
+                }
+                paragraf.innerHTML = ordem_decrescente;
+                num = num - 2;
+            }  
+        }
+
+        window.onload = function() {
+            mostrar();
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+        <p id="impares" style="text-align: center; font-size: 50px;"></p>
+    </div>
+
+</body>
+</html>
