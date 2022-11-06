@@ -34,9 +34,10 @@ function cadastrarIngredientes() {
 
     novoI.push(cadastroI);
     console.log(novoI);
-
-    x(); //função y
+    
     z(); //função z
+    x(); //função x
+    
     iIngrediente.value="";
     iqtdA.value="";
     iqtdC.value="";
@@ -60,6 +61,8 @@ function x() {
     tdValorTotal = document.createElement("td");
 
     for (var index = 0; index < novoP.length; index++) {
+
+        var total = 0;
         
         var cadastroP = novoP[index];
 
@@ -75,7 +78,7 @@ function x() {
             
             var cadastroI = novoI[index];
 
-            var total = (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild))) * parseFloat(cadastroI.valor);
+            total = (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild))) * parseFloat(cadastroI.valor);
 
             tdValorTotal.innerText = "R$ " + total;
             trPessoa.appendChild(tdValorTotal);
@@ -111,7 +114,8 @@ function z() {
     corpoTabela3.innerHTML=""; //O corpo tabela 3 irá receber um texto.
 
     for (var index = 0; index < novoI.length; index++) {
-        // for (var index = 0; index < novoI.length; index++) {
+
+        for (var index = 0; index < novoI.length; index++) {
             var trIngredientes = document.createElement("tr"); //tr é linha.
             var tdNomeIng = document.createElement("td"); //td é célula dentro da linha.
             var tdQuantidade = document.createElement("td"); //td é célula dentro da linha.
@@ -122,12 +126,13 @@ function z() {
             tdNomeIng.innerText = cadastroI.ingt;
             trIngredientes.appendChild(tdNomeIng);
 
-            contaFinal = parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild));
+            var contaFinal = parseFloat(cadastroP.qtdChild) + parseFloat(cadastroI.qtdA);
+            // (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild)));
             
             tdQuantidade.innerText = contaFinal;
             trIngredientes.appendChild(tdQuantidade);
     
             corpoTabela3.appendChild(trIngredientes);
-        // }
+        }
     }
 }
