@@ -23,11 +23,13 @@ function cadastrarIngredientes() {
     var cadastroI = new Array();
 
     var iIngrediente = document.getElementById('ingrediente');
+    var iUnidade = document.getElementById('unidade');
     var iqtdA = document.getElementById('qtdA');
     var iqtdC = document.getElementById('qtdC');
     var ivalor = document.getElementById('valor');
 
     cadastroI.ingt = iIngrediente.value;
+    cadastroI.uni = iUnidade.value;
     cadastroI.qtdA = iqtdA.value;
     cadastroI.qtdC = iqtdC.value;
     cadastroI.valor = ivalor.value;
@@ -61,28 +63,30 @@ function x() {
     tdValorTotal = document.createElement("td");
 
     for (var index = 0; index < novoP.length; index++) {
-
-        var total = 0;
         
         var cadastroP = novoP[index];
 
         tdNome.innerText=cadastroP.nome;
         trPessoa.appendChild(tdNome);
 
-        tdValorTotal.innerText="R$ 00,00";
+        tdValorTotal.innerText='R$ 00,00';
         trPessoa.appendChild(tdValorTotal);
 
         corpoTabela1.appendChild(trPessoa);
+        
+        var total = 0;
 
         for (var index = 0; index < novoI.length; index++) {
             
             var cadastroI = novoI[index];
-
-            total = (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild))) * parseFloat(cadastroI.valor);
+            
+            valorTotal = ((parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild))) / 1000) * parseFloat(cadastroI.valor);
+            
+            total += valorTotal;
 
             tdValorTotal.innerText = "R$ " + total;
             trPessoa.appendChild(tdValorTotal);
-
+   
             corpoTabela1.appendChild(trPessoa);
         }
     }
@@ -113,25 +117,23 @@ function z() {
     var corpoTabela3 = document.getElementById("corpoTabela3");
     corpoTabela3.innerHTML=""; //O corpo tabela 3 irá receber um texto.
 
-    for (var index = 0; index < novoI.length; index++) {
-
+    for (var i = 0; i < novoP.length; i++) {
         for (var index = 0; index < novoI.length; index++) {
             var trIngredientes = document.createElement("tr"); //tr é linha.
             var tdNomeIng = document.createElement("td"); //td é célula dentro da linha.
             var tdQuantidade = document.createElement("td"); //td é célula dentro da linha.
 
             var cadastroI = novoI[index];
-            var cadastroP = novoP[index];
-            
+            var cadastroP = novoP[i];
+
             tdNomeIng.innerText = cadastroI.ingt;
             trIngredientes.appendChild(tdNomeIng);
 
-            var contaFinal = parseFloat(cadastroP.qtdChild) + parseFloat(cadastroI.qtdA);
-            // (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC) * parseFloat(cadastroP.qtdChild)));
+            var contaFinal = (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC)* parseFloat(cadastroP.qtdChild)) + ' g');
             
             tdQuantidade.innerText = contaFinal;
             trIngredientes.appendChild(tdQuantidade);
-    
+            
             corpoTabela3.appendChild(trIngredientes);
         }
     }
